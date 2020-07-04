@@ -4,16 +4,23 @@ This file explains the code saved in run_analysis.R.
 The objective is to create a tidy dataset containing all of the original observations of the study. 
 The following steps were taken to create the final output:
 
--Read in the following text files as data.tables into R:
+- Read in the following text files as data.tables into R:
   features.txt, activity_labels.txt, subject_train.txt, X_train.txt, y_train.txt, subject_test.txt, X_test.txt, y_test.txt
-  (available at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
--Rename the columns in the "X_train" and "X_test" datasets with feature names from "features"
--Append the columns for subject and response (y): that is, append "subject_train" and "y_train" to "X_train" and append "subject_test" and "y_test" to "X_test"
--Row bind "X_train" and "X_test" to create a dataset called "merged"
--Filter the columns to only include subject, response (y), and any variables related to a mean or standard deviation
--Join activity name to the merged dataset from "activity_labels", matching the activity code to the code in the response column of merged
--Rename the joined activity name column to be "activity" and drop the response column
--Using dplyr package, group by subject and activity and compute the mean of all numeric variables
+  (available at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+  
+- Rename the columns in the "X_train" and "X_test" datasets with feature names from "features".
+
+- Append the columns for subject and response (y): that is, append "subject_train" and "y_train" to "X_train" and append "subject_test" and "y_test" to "X_test".
+
+- Row bind "X_train" and "X_test" to create a dataset called "merged".
+
+- Filter the columns to only include subject, response (y), and any variables related to a mean or standard deviation.
+
+- Join activity name to the merged dataset from "activity_labels", matching the activity code to the code in the response column of merged.
+
+- Rename the joined activity name column to be "activity" and drop the response column.
+
+- Using dplyr package, group by subject and activity and compute the mean of all numeric variables.
 
 The resulting "final_dataset" is a tidy dataset, containing observations for only the mean and standard deviation variables.
 The table has been summarized to each row representing the average reading for each subject/activity combo.
@@ -22,14 +29,13 @@ See Below for a codebook describing the original datasets
 ==================================================================
 
 Version 1.0
-==================================================================
+
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
-==================================================================
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
