@@ -38,8 +38,8 @@ library(dplyr)
 finaldataset <- merged[,..colstokeep] %>%
   left_join(activity_labels,by=c("response"="V1")) %>% #descriptive activity names
   rename(activity=V2) %>%
-  select(-response)
-group_by(subject,activity) %>%
+  select(-response) %>%
+  group_by(subject,activity) %>%
   summarise_all(mean)
 
 #write table
