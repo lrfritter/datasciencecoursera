@@ -1,13 +1,62 @@
+Dataset created by analysis.R
+==================================================================
+Summary
+Each record in the dataset represents a unique subject/activity combo, and gives the averages of the mean and standard deviations of the metrics listed below.
+
+Columns in tidy dataset:
+-subject - id representing the individual in the study
+
+-activity - one of: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+-tBodyAcc - X,Y,Z coordinate mean and std
+
+-tGravityAcc - X,Y,Z coordinate mean and std
+
+-tBodyAccJerk - X,Y,Z coordinate mean and std
+
+-tBodyGyro - X,Y,Z coordinate mean and std
+
+-tBodyGyroJerk - X,Y,Z coordinate mean and std
+
+-tBodyAccMag - mean and std
+
+-tGravityAccMag - mean and std
+
+-tBodyAccJerkMag - mean and std
+
+-tBodyGyroMag - mean and std
+
+-tBodyGyroJerkMag - mean and std
+
+-fBodyAcc - X,Y,Z coordinate mean, std and mean freq
+
+-fBodyAccJerk - X,Y,Z coordinate mean, std and mean freq
+
+-fBodyGyro - X,Y,Z coordinate mean, std and mean freq
+
+-fBodyAccMag - mean, std and mean freq
+
+-fBodyBodyAccJerkMag - mean, std and mean freq
+
+-fBodyBodyGyroMag - mean, std and mean freq
+
+-fBodyBodyGyroJerkMag - mean, std and mean freq
+
+-response - original code representing the activity 
+
+
+See Below for a codebook describing the original datasets
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
-==================================================================
+
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
+
 ==================================================================
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
